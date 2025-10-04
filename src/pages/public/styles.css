@@ -21,23 +21,29 @@ body {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
 }
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
+
 input, button, textarea, select {
   font: inherit;
 }
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
 #root, #__next {
   isolation: isolate;
 }
@@ -55,6 +61,7 @@ button, .button {
   cursor: pointer;
   text-decoration: none;
 }
+
 button:hover, .button:hover {
   background: var(--primary-400);
 }
@@ -69,6 +76,7 @@ button:hover, .button:hover {
   padding: 1rem;
   display: none;
 }
+
 .error.visible {
   display: block;
 }
@@ -98,10 +106,12 @@ button:hover, .button:hover {
   padding: 10px 16px;
   background-color: #fff;
 }
-.card > :first-child {
+
+.card> :first-child {
   margin-top: 0;
 }
-.card > :last-child {
+
+.card> :last-child {
   margin-bottom: 0;
 }
 
@@ -209,4 +219,131 @@ button:hover, .button:hover {
   text-align: center;
   text-wrap: balance;
   margin-top: 1rem;
+}
+
+/* Chat Interface Styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.partner-area {
+  flex: 1;
+  background-color: var(--gray-100);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.partner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.partner-info strong {
+  font-size: 1.1rem;
+  color: var(--gray-700);
+}
+
+.handle {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+}
+
+.waiting {
+  color: var(--gray-500);
+  font-style: italic;
+}
+
+.logout-form {
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: var(--error-500);
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.logout-btn:hover {
+  background-color: #d00;
+}
+
+.partner-typing {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--gray-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  font-style: italic;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.my-area {
+  background-color: #fff;
+  border-top: 1px solid var(--border-color);
+}
+
+.my-header {
+  padding: 1rem;
+  background-color: var(--primary-100);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.my-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.my-info strong {
+  font-size: 1.1rem;
+  color: var(--gray-700);
+}
+
+.typing-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.typing-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.typing-input:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 2px var(--primary-100);
+}
+
+.typing-indicator {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  font-style: italic;
+  min-height: 1.2rem;
 }
